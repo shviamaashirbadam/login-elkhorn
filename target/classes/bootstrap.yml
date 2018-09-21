@@ -1,0 +1,8 @@
+spring:
+ application:
+   name: java-account-service
+ cloud:
+    config:
+      uri: http://ec2-18-191-245-141.us-east-2.compute.amazonaws.com:8888
+      fail-fast: true
+ 
