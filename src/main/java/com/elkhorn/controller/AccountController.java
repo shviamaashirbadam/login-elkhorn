@@ -15,6 +15,8 @@ import com.elkhorn.service.AccountService;
 
 @RestController
 public class AccountController {
+	
+
 
 	@Autowired
 	AccountService accountService;
@@ -24,9 +26,11 @@ public class AccountController {
 		 Account account = accountService.accountbyid(id);
 		 return new ResponseEntity<AccountDTO>(new AccountDTO(account), HttpStatus.OK);
 	}
-	@PostMapping(path = "/account/login")
+	@PostMapping(path = "/account/register")
 	public ResponseEntity<AccountDTO> getpublic(@RequestBody AccountDTO account) {
 		 Account accountNew = accountService.createAccount(new Account(account));
 		 return new ResponseEntity<AccountDTO>(new AccountDTO(accountNew), HttpStatus.OK);
 	}
+	
+	
 }
