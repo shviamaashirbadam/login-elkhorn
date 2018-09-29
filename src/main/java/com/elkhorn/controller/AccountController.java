@@ -26,7 +26,7 @@ public class AccountController {
 		 Account account = accountService.accountbyid(id);
 		 return new ResponseEntity<AccountDTO>(new AccountDTO(account), HttpStatus.OK);
 	}
-	@PostMapping(path = "/account/register")
+	@PostMapping(path = "/login")
 	public ResponseEntity<AccountDTO> getpublic(@RequestBody AccountDTO account) {
 		 Account accountNew = accountService.createAccount(new Account(account));
 		 return new ResponseEntity<AccountDTO>(new AccountDTO(accountNew), HttpStatus.OK);

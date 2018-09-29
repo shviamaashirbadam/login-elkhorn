@@ -3,6 +3,7 @@ spring:
    name: java-account-service
  cloud:
     config:
-      uri: $(CLOUD_CONFIG)
+      uri: ${CLOUD_CONFIG}
       fail-fast: true
+ 
  
