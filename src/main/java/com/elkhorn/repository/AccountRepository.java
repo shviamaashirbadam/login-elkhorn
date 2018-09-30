@@ -8,6 +8,8 @@ import com.elkhorn.beans.Account;
 @Repository
 public interface AccountRepository extends JpaRepository <Account, Integer> {
 	
+
+		public Account findByusername(String username);
 	
 	
 	
